@@ -5,7 +5,7 @@ set -e
 
 # Define variables
 NEXUS_VERSION="3.35.0-01"  # Replace with the desired Nexus version
-NEXUS_URL="https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/$NEXUS_VERSION/nexus-$NEXUS_VERSION-unix.tar.gz"
+NEXUS_URL="https://download.sonatype.com/nexus/3/$NEXUS_VERSION/nexus-$NEXUS_VERSION-unix.tar.gz"
 NEXUS_DIR="/opt/nexus"
 NEXUS_WORK_DIR="$NEXUS_DIR/sonatype-work"
 NEXUS_USER="nexus"

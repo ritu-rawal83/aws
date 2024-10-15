@@ -34,8 +34,8 @@ mkdir -p /tmp/nexus
 mkdir -p $NEXUS_WORK_DIR  # Ensure the sonatype-work directory is created
 
 # Ensure the correct ownership and permissions
-chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_DIR
-chmod -R 755 $NEXUS_DIR
+sudo chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_DIR
+sudo chmod -R 755 $NEXUS_DIR
 
 # 3. Download and extract Nexus
 echo "Downloading Nexus version $NEXUS_VERSION..."
@@ -61,8 +61,8 @@ fi
 
 # 6. Set ownership for Nexus directories and files
 echo "Setting ownership for Nexus directories and files..."
-chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_DIR
-chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_WORK_DIR
+sudo chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_DIR
+sudo chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_WORK_DIR
 
 # 7. Ensure Nexus binaries are executable
 echo "Setting execute permissions for Nexus binaries..."

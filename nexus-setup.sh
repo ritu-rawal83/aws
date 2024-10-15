@@ -31,7 +31,11 @@ fi
 echo "Creating necessary directories..."
 mkdir -p $NEXUS_DIR
 mkdir -p /tmp/nexus
-mkdir -p $NEXUS_WORK_DIR
+mkdir -p $NEXUS_WORK_DIR  # Ensure the sonatype-work directory is created
+
+# Ensure the correct ownership and permissions
+chown -R $NEXUS_USER:$NEXUS_USER $NEXUS_DIR
+chmod -R 755 $NEXUS_DIR
 
 # 3. Download and extract Nexus
 echo "Downloading Nexus version $NEXUS_VERSION..."
